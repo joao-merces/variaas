@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" styleClass="background" stylesheets="@Styles/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CadastrarFuncionarioController">
+   <children>
+      <Label layoutX="40.0" layoutY="84.0" text="Nome">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textNomeFuncionario" layoutX="40.0" layoutY="116.0" prefHeight="35.0" prefWidth="233.0" promptText="Nome do funcionário" />
+      <Button fx:id="botaoVoltar" layoutX="200.0" layoutY="389.0" mnemonicParsing="false" onAction="#botaoVoltarClicked" prefHeight="35.0" prefWidth="92.0" stylesheets="@Styles/styles.css" text="Voltar" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn-color" />
+            <String fx:value="btn-moved" />
+         </styleClass>
+      </Button>
+      <Button fx:id="botaoCadastrar" layoutX="306.0" layoutY="389.0" mnemonicParsing="false" onAction="#botaoCadastrarClicked" prefHeight="35.0" prefWidth="92.0" stylesheets="@Styles/styles.css" text="Cadastrar" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn-color" />
+            <String fx:value="btn-moved" />
+         </styleClass>
+      </Button>
+      <Label layoutX="232.0" layoutY="28.0" text="Variaas" textFill="#ff5056">
+         <font>
+            <Font name="Serif Bold" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textSalario" layoutX="331.0" layoutY="115.0" prefHeight="35.0" prefWidth="233.0" promptText="Salário" />
+      <Label layoutX="331.0" layoutY="83.0" prefHeight="25.0" prefWidth="55.0" text="Salário">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="331.0" layoutY="172.0" prefHeight="25.0" prefWidth="149.0" text="Data de nascimento">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="172.0" prefHeight="25.0" prefWidth="181.0" text="E-mail">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textEmailFuncionario" layoutX="40.0" layoutY="208.0" prefHeight="35.0" prefWidth="233.0" promptText="E-mail do funcionário" />
+      <DatePicker fx:id="textDataNascimento" layoutX="331.0" layoutY="205.0" prefHeight="35.0" prefWidth="233.0" promptText="Data de nascimento" />
+   </children>
+</Pane>

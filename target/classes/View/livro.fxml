@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="boxLivro" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="180.0" style="-fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LivroController">
+   <children>
+      <ImageView fx:id="livroCapa" fitHeight="220.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@LivrosCapas/o%20poder%20do%20habito.jpg" />
+         </image>
+      </ImageView>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label fx:id="livroTitulo" prefHeight="33.0" prefWidth="160.0" text="O poder do habito">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="livroAutor" prefHeight="22.0" prefWidth="160.0" text="Autor" />
+            <Button fx:id="btnComprar" mnemonicParsing="false" onAction="#btnComprarClicked" prefHeight="34.0" prefWidth="162.0" stylesheets="@Styles/styles.css" text="Comprar" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="btn-color" />
+                  <String fx:value="btn-moved" />
+               </styleClass>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

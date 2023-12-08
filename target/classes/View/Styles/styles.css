@@ -1,0 +1,32 @@
+.selected {
+    -fx-background-color: #F3F3F3
+}
+
+.mouse-moved:hover {
+    -fx-background-color: #E4E4E4;
+}
+
+.background {
+    -fx-background-color: #FFFFFF
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0)
+}
+
+.round {
+    -fx-border-radius: 50
+}
+
+.shadow {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0), 10, 0, 0, 10)
+}
+
+.btn-color {
+    -fx-background-color: #ff5056;
+}
+
+.btn-moved:hover {
+    /*-fx-background-color: #5d0e10;*/
+    -fx-background-color: #ad2429;
+}

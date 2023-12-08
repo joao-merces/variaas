@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PaginaGerenteController">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="214.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="57.0" prefWidth="214.0" stylesheets="@Styles/styles.css">
+               <children>
+                  <Button fx:id="btnAddLivro" mnemonicParsing="false" onAction="#btnAddLivroClicked" prefHeight="41.0" prefWidth="95.0" stylesheets="@Styles/styles.css" text="Adicionar livro" textFill="WHITE">
+                     <styleClass>
+                        <String fx:value="mouse-moved" />
+                        <String fx:value="btn-moved" />
+                        <String fx:value="btn-color" />
+                     </styleClass>
+                  </Button>
+               </children>
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="transparent" />
+               </styleClass>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="57.0" prefWidth="214.0" stylesheets="@Styles/styles.css">
+               <children>
+                  <Button fx:id="btnRemoveLivro" mnemonicParsing="false" onAction="#btnRemoveLivroClicked" prefHeight="41.0" prefWidth="90.0" stylesheets="@Styles/styles.css" text="Remover livro" textFill="WHITE">
+                     <styleClass>
+                        <String fx:value="mouse-moved" />
+                        <String fx:value="btn-moved" />
+                        <String fx:value="btn-color" />
+                     </styleClass>
+                  </Button>
+               </children>
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="transparent" />
+               </styleClass>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="57.0" prefWidth="214.0" stylesheets="@Styles/styles.css">
+               <children>
+                  <Button fx:id="btnAtualizarLivro" mnemonicParsing="false" onAction="#btnAtualizarLivroClicked" prefHeight="41.0" prefWidth="90.0" stylesheets="@Styles/styles.css" text="Atualizar livro" textFill="WHITE">
+                     <styleClass>
+                        <String fx:value="mouse-moved" />
+                        <String fx:value="btn-moved" />
+                        <String fx:value="btn-color" />
+                     </styleClass>
+                  </Button>
+               </children>
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="transparent" />
+               </styleClass>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="57.0" prefWidth="214.0" stylesheets="@Styles/styles.css">
+               <children>
+                  <Button fx:id="btnAdicionarFuncionario" mnemonicParsing="false" onAction="#btnAdicionarFuncionarioClicked" prefHeight="41.0" prefWidth="134.0" stylesheets="@Styles/styles.css" text="Cadastrar funcionário" textFill="WHITE">
+                     <styleClass>
+                        <String fx:value="mouse-moved" />
+                        <String fx:value="btn-moved" />
+                        <String fx:value="btn-color" />
+                     </styleClass>
+                  </Button>
+               </children>
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="transparent" />
+               </styleClass>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="57.0" prefWidth="214.0" stylesheets="@Styles/styles.css">
+               <children>
+                  <Button fx:id="btnRemoveFuncionario" mnemonicParsing="false" onAction="#btnRemoveFuncionarioClicked" prefHeight="41.0" prefWidth="136.0" stylesheets="@Styles/styles.css" text="Remover funcionário" textFill="WHITE">
+                     <styleClass>
+                        <String fx:value="mouse-moved" />
+                        <String fx:value="btn-moved" />
+                        <String fx:value="btn-color" />
+                     </styleClass>
+                  </Button>
+               </children>
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="transparent" />
+               </styleClass>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="57.0" prefWidth="214.0" stylesheets="@Styles/styles.css">
+               <children>
+                  <Button fx:id="btnAtualizarFuncionario" mnemonicParsing="false" onAction="#btnAtualizarFuncionarioClicked" prefHeight="41.0" prefWidth="138.0" stylesheets="@Styles/styles.css" text="Atualizar funcionário" textFill="WHITE">
+                     <styleClass>
+                        <String fx:value="mouse-moved" />
+                        <String fx:value="btn-moved" />
+                        <String fx:value="btn-color" />
+                     </styleClass>
+                  </Button>
+               </children>
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="transparent" />
+               </styleClass>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="57.0" prefWidth="214.0" stylesheets="@Styles/styles.css">
+               <children>
+                  <Button fx:id="btnListaCliente" mnemonicParsing="false" onAction="#btnListaClienteClicked" prefHeight="41.0" prefWidth="139.0" stylesheets="@Styles/styles.css" text="Lista clientes" textFill="WHITE">
+                     <styleClass>
+                        <String fx:value="mouse-moved" />
+                        <String fx:value="btn-moved" />
+                        <String fx:value="btn-color" />
+                     </styleClass>
+                  </Button>
+               </children>
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="transparent" />
+               </styleClass>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <TableView fx:id="tableView" prefHeight="400.0" prefWidth="736.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="tableViewCodigo" prefWidth="75.0" text="Código" />
+          <TableColumn fx:id="tableViewNome" prefWidth="150.0" text="Nome" />
+            <TableColumn fx:id="tableViewGenero" minWidth="9.0" prefWidth="77.0" text="Gênero" />
+            <TableColumn fx:id="tableViewAutor" prefWidth="99.0" text="Autor" />
+            <TableColumn fx:id="tableViewPreco" minWidth="0.0" prefWidth="77.0" text="Preço" />
+            <TableColumn fx:id="tableViewAnoPublicacao" prefWidth="118.0" text="Ano de publicaçao" />
+            <TableColumn fx:id="tableViewQtdEstoque" prefWidth="93.0" text="Qtd Estoque" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

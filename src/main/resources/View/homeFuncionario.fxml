@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="background" stylesheets="@Styles/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomeFuncionarioController">
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="1301.0" styleClass="white-background" stylesheets="@Styles/styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="60.0" prefWidth="189.0" text="Variaas" textFill="#ff5056">
+               <font>
+                  <Font name="Serif Bold" size="36.0" />
+               </font>
+            </Label>
+            <Separator maxHeight="-Infinity" orientation="VERTICAL" prefHeight="39.0" prefWidth="7.0" />
+            <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="35.0" prefWidth="290.0" style="-fx-background-radius: 50;" stylesheets="@Styles/styles.css">
+               <children>
+                  <TextField prefHeight="25.0" prefWidth="250.0" promptText="Pesquise" style="-fx-background-radius: 50;" stylesheets="@Styles/styles.css" />
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Resources/lupa.png" />
+                     </image>
+                  </ImageView>
+               </children></HBox>
+            <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="155.0">
+               <children>
+                  <Label fx:id="textUser" prefHeight="27.0" prefWidth="75.0" text="Usuário">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Resources/user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <padding>
+      <Insets left="20.0" right="20.0" />
+   </padding>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="250.0" spacing="10.0" styleClass="white-background" stylesheets="@Styles/styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="202.0" prefWidth="250.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="40.0" prefWidth="158.0" text="Navegue">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@Styles/styles.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Resources/top%20rated.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="40.0" prefWidth="158.0" text="Melhores">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@Styles/styles.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Resources/explore.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="40.0" prefWidth="158.0" text="Explore">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@Styles/styles.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Resources/categories.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="40.0" prefWidth="158.0" text="Categorias">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Separator prefWidth="200.0" />
+            <VBox prefHeight="202.0" prefWidth="250.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="40.0" prefWidth="158.0" text="Seus Livros">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@Styles/styles.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Resources/reading.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="40.0" prefWidth="158.0" text="Lendo">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@Styles/styles.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Resources/favorite.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="40.0" prefWidth="158.0" text="Favoritos">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@Styles/styles.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Resources/history.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="40.0" prefWidth="158.0" text="Histórico">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Separator prefWidth="200.0" />
+            <VBox prefHeight="172.0" prefWidth="250.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="40.0" prefWidth="158.0" text="Sua biblioteca">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@Styles/styles.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Resources/shelve.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="40.0" prefWidth="158.0" text="Sua estante ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="250.0">
+                     <children>
+                        <Button fx:id="botaoCriarEstante" mnemonicParsing="false" onAction="#botaobotaoCriarEstanteClicked" prefHeight="42.0" prefWidth="150.0" stylesheets="@Styles/styles.css" text="Criar uma estante nova" textFill="WHITE">
+                           <styleClass>
+                              <String fx:value="btn-color" />
+                              <String fx:value="btn-moved" />
+                           </styleClass></Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="62.0" prefWidth="250.0">
+               <children>
+                  <Button fx:id="botaoAdministrador" mnemonicParsing="false" onAction="#botaoAdministradorClicked" prefHeight="42.0" prefWidth="150.0" stylesheets="@Styles/styles.css" text="Administrador" textFill="WHITE">
+                     <styleClass>
+                        <String fx:value="btn-color" />
+                        <String fx:value="btn-moved" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets top="15.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+   </left>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="recomendados" prefHeight="75.0" prefWidth="300.0" text="Recomendados para você!">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ScrollPane prefHeight="731.0" prefWidth="985.0">
+               <content>
+                  <GridPane fx:id="livroContainer" prefHeight="0.0" prefWidth="2.0">
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </content></ScrollPane>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

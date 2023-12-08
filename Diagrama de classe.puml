@@ -1,0 +1,390 @@
+@startuml
+interface Model.DAO.FuncionarioDAO {
+~ void salvar(Funcionario)
+~ void atualizar(Funcionario)
+~ void excluir(Funcionario)
+~ List<Funcionario> listarTodos()
+~ Funcionario listarUm(Long)
+~ List<Funcionario> listarSalario()
+~ void atualizarSalariosPorcentagem(float)
+~ void atualizarSalarioFuncionario(Long,float)
+}
+class Model.DAO.ClienteDAOImpl {
+~ EntityManager manager
++ void salvar(Cliente)
++ void atualizar(Cliente)
++ void excluir(Cliente)
++ List<Cliente> listarTodos()
++ Cliente listarUm(Long)
+}
+class Model.VO.Pedido {
+- Long pedidoId
+- LocalDate pedidoData
+- String pedidoSituacao
+- Endereco endereco
+- Cliente pedidoClienteId
+- Funcionario pedidoFuncionarioId
+- List<Livros_Pedidos> livrosPedidosId
++ Long getPedidoId()
++ void setPedidoId(Long)
++ LocalDate getPedidoData()
++ void setPedidoData(LocalDate)
++ String getPedidoSituacao()
++ void setPedidoSituacao(String)
++ Endereco getEndereco()
++ void setEndereco(Endereco)
++ Cliente getPedidoClienteId()
++ void setPedidoClienteId(Cliente)
++ Funcionario getPedidoFuncionarioId()
++ void setPedidoFuncionarioId(Funcionario)
++ List<Livros_Pedidos> getLivrosPedidosId()
++ void setLivrosPedidosId(List<Livros_Pedidos>)
+}
+interface Model.DAO.ClienteDAO {
+~ void salvar(Cliente)
+~ void atualizar(Cliente)
+~ void excluir(Cliente)
+~ List<Cliente> listarTodos()
+~ Cliente listarUm(Long)
+}
+class Controller.CadastrarLivroController {
+- TextField textPreco
+- TextField textQuantidade1
+- TextField textQuantidade
+- Button botaoCadastrar
+- DatePicker textAnoPublicacao
+- TextField textAutor
+- TextField textTitulo
+- Button botaoVoltar
+- TextField textGenero
+~ void botaoVoltarClicked(ActionEvent)
+~ void botaoCadastrarClicked(ActionEvent)
+}
+class View.CadastrarLivro {
++ void start(Stage)
+}
+class Model.VO.Venda {
+- Long vendaId
+- String vendaMetodoPagamento
+- Float vendaTotal
+- Livros_Pedidos vendaLivrosPedidosId
++ Long getVendaId()
++ void setVendaId(Long)
++ String getVendaMetodoPagamento()
++ void setVendaMetodoPagamento(String)
++ Float getVendaTotal()
++ void setVendaTotal(Float)
++ Livros_Pedidos getVendaLivrosPedidosId()
++ void setVendaLivrosPedidosId(Livros_Pedidos)
+}
+class Model.DAO.FuncionarioDAOImpl {
+~ EntityManager manager
++ void salvar(Funcionario)
++ void atualizar(Funcionario)
++ void excluir(Funcionario)
++ List<Funcionario> listarTodos()
++ Funcionario listarUm(Long)
++ List<Funcionario> listarSalario()
++ void atualizarSalariosPorcentagem(float)
++ void atualizarSalarioFuncionario(Long,float)
+}
+class View.Login {
++ void start(Stage)
++ {static} void main(String[])
+}
+class Main {
++ {static} void iniciaHibernate()
++ {static} void main(String[])
+}
+class Model.DAO.ConexaoDB {
+- {static} EntityManagerFactory factory
+- {static} EntityManager manager
++ {static} EntityManager getInstance()
++ {static} void close()
+}
+class Controller.LoginController {
+- Button botaoEntrar
+- Button botaoCadastrar
+- TextField textUsuario
+- PasswordField textSenha
++ void botaoCadastrarClicked(ActionEvent)
++ void botaoEntrarClicked()
+}
+class Model.DAO.PedidoDAOImpl {
+~ EntityManager manager
++ void salvar(Pedido)
++ void atualizar(Pedido)
++ void excluir(Pedido)
++ List<Pedido> listarTodos()
++ Pedido listarUm(Long)
++ Pedido listarFuncionario(String)
+}
+class Model.VO.Livros_Pedidos {
+- Long livrosPedidosId
+- Integer livrosPedidosQuantidade
+- Pedido livrosPedidosPedidoId
+- Livro livrosPedidosLivroId
+- List<Venda> vendaId
++ Long getLivrosPedidosId()
++ void setLivrosPedidosId(Long)
++ Integer getLivrosPedidosQuantidade()
++ void setLivrosPedidosQuantidade(Integer)
++ Pedido getLivrosPedidosPedidoId()
++ void setLivrosPedidosPedidoId(Pedido)
++ Livro getLivrosPedidosLivroId()
++ void setLivrosPedidosLivroId(Livro)
++ List<Venda> getVendaId()
++ void setVendaId(List<Venda>)
+}
+class Controller.RemoverFuncionarioController {
+- TextField textCodigo
+- Button botaoRemover
+- Label textFunc
+- Button botaoVoltar
+~ void botaoVoltarClicked(ActionEvent)
+~ void botaoRemoverClicked(ActionEvent)
+}
+class Controller.HomeController {
+- Label recomendados
+- Label filtros
+- Button botaoCriarEstante
+~ void botaoCriarEstanteClicked(ActionEvent)
++ void initialize(URL,ResourceBundle)
+}
+class View.CadastrarFuncionario {
++ void start(Stage)
+}
+class Controller.SignUpController {
+- PasswordField textSenha
+- TextField textCpf
+- Button botaoCadastrar
+- TextField textEmail
+- Button botaoVoltar
+- TextField textNome
++ void botaoCadastrarClicked(ActionEvent)
++ void botaoVoltarClicked(ActionEvent)
+}
+class Controller.CadastrarFuncionarioController {
+- Button botaoCadastrar
+- DatePicker textDataNascimento
+- TextField textSalario
+- Button botaoVoltar
+- TextField textEmailFuncionario
+- TextField textCargo
+- TextField textNomeFuncionario
+- TextField textTelefone
+~ void botaoVoltarClicked(ActionEvent)
+~ void botaoCadastrarClicked(ActionEvent)
+}
+class Model.VO.Cliente {
+- Long clienteId
+- String clienteNome
+- LocalDate clienteDataNascimento
+- String clienteEmail
+- String clienteTelefone
+- List<Pedido> pedidoId
++ Long getClienteId()
++ void setClienteId(Long)
++ String getClienteNome()
++ void setClienteNome(String)
++ LocalDate getClienteDataNascimento()
++ void setClienteDataNascimento(LocalDate)
++ String getClienteEmail()
++ void setClienteEmail(String)
++ String getClienteTelefone()
++ void setClienteTelefone(String)
++ List<Pedido> getPedidoId()
++ void setPedidoId(List<Pedido>)
+}
+class util.GerarBanco {
++ {static} void main(String[])
+}
+class Controller.LivroController {
+- Label nomeLivro
+- ImageView capaLivro
++ void setDados(Livro)
+}
+interface Model.DAO.LivroDAO {
+~ void salvar(Livro)
+~ void atualizar(Livro)
+~ void excluir(Livro)
+~ List<Livro> listarTodos()
+~ Livro listarUm(Long)
+~ Livro listarTitulo(String)
+~ List<Livro> listarLivrosPedido(Long)
+}
+class Model.VO.Funcionario {
+- Long funcionarioId
+- String funcionarioNome
+- Float funcionarioSalario
+- LocalDate funcionarioDataNascimento
+- String funcionarioTelefone
+- String funcionarioEmail
+- List<Pedido> pedidoId
++ Long getFuncionarioId()
++ void setFuncionarioId(Long)
++ String getFuncionarioNome()
++ void setFuncionarioNome(String)
++ Float getFuncionarioSalario()
++ void setFuncionarioSalario(Float)
++ LocalDate getFuncionarioDataNascimento()
++ void setFuncionarioDataNascimento(LocalDate)
++ String getFuncionarioTelefone()
++ void setFuncionarioTelefone(String)
++ String getFuncionarioEmail()
++ void setFuncionarioEmail(String)
++ List<Pedido> getPedidoId()
++ void setPedidoId(List<Pedido>)
+}
+class View.PaginaGerente {
++ void start(Stage)
+}
+class View.SignUp {
++ void start(Stage)
++ {static} void main(String[])
+}
+class Model.DAO.LivroDAOImpl {
+~ EntityManager manager
++ void salvar(Livro)
++ void atualizar(Livro)
++ void excluir(Livro)
++ List<Livro> listarTodos()
++ Livro listarUm(Long)
++ Livro listarTitulo(String)
++ List<Livro> listarLivrosPedido(Long)
+}
+class View.RemoverFuncionario {
++ void start(Stage)
+}
+class View.Home {
++ void start(Stage)
++ {static} void main(String[])
+}
+class Controller.HomeFuncionarioController {
+- Label filtro
+- Label recomendados
+- Button botaoAdministrador
+- Button botaoCriarEstante
+~ void botaoAdministradorClicked(ActionEvent)
+~ void botaobotaoCriarEstanteClicked(ActionEvent)
+}
+class View.HomeFuncionario {
++ void start(Stage)
++ {static} void main(String[])
+}
+class Controller.PaginaGerenteController {
+- Button botaoRmFuncionario
+- Button botaoAddFuncionario
+- Button botaoPedidos
+- Button botaoPesquisar
+- Button botaoAddLivro
+- TableView<?> tableView
+- TableColumn<?,?> tableViewCodigo
+- TableColumn<?,?> tableViewPreco
+- TableColumn<?,?> tableViewGenero
+- TableColumn<?,?> tableViewAutor
+- TableColumn<?,?> tableViewAnoPublicacao
+- TableColumn<?,?> tableViewNome
+- TableColumn<?,?> tableViewQtdeEstoque
+~ void botaoAddLivroClicked(ActionEvent)
+~ void botaoAddFuncionarioClicked(ActionEvent)
+~ void botaoRmFuncionarioClicked(ActionEvent)
+~ void botaoPedidosClicked(ActionEvent)
+~ void botaoPesquisarClicked(ActionEvent)
+}
+class Model.VO.Endereco {
+- String enderecoLogradouro
+- int enderecoNumero
+- String enderecoComplemento
+- String enderecoBairro
+- String enderecoCEP
+- String enderecoCidade
+- String enderecoEstado
++ String getEnderecoLogradouro()
++ void setEnderecoLogradouro(String)
++ int getEnderecoNumero()
++ void setEnderecoNumero(int)
++ String getEnderecoComplemento()
++ void setEnderecoComplemento(String)
++ String getEnderecoBairro()
++ void setEnderecoBairro(String)
++ String getEnderecoCEP()
++ void setEnderecoCEP(String)
++ String getEnderecoCidade()
++ void setEnderecoCidade(String)
++ String getEnderecoEstado()
++ void setEnderecoEstado(String)
+}
+class Model.VO.Livro {
+- Long livroId
+- String livroTitulo
+- String livroAutor
+- String livroGenero
+- Float livroPreco
+- LocalDate livroPublicacao
+- Integer livroEstoque
+- String imageSource
+- List<Livros_Pedidos> livrosPedidosId
++ Long getLivroId()
++ void setLivroId(Long)
++ String getLivroTitulo()
++ void setLivroTitulo(String)
++ String getLivroAutor()
++ void setLivroAutor(String)
++ String getLiv_genero()
++ void setLiv_genero(String)
++ Float getLiv_preco()
++ void setLiv_preco(Float)
++ LocalDate getLivroPublicacao()
++ void setLivroPublicacao(LocalDate)
++ Integer getLivroEstoque()
++ void setLivroEstoque(Integer)
++ String getLivroGenero()
++ void setLivroGenero(String)
++ Float getLivroPreco()
++ void setLivroPreco(Float)
++ List<Livros_Pedidos> getLivrosPedidosId()
++ void setLivrosPedidosId(List<Livros_Pedidos>)
++ String getImageSource()
++ void setImageSource(String)
+}
+interface Model.DAO.VendaDAO {
+~ void salvar(Venda)
+~ void atualizar(Venda)
+~ void excluir(Venda)
+~ List<Venda> listarTodos()
+~ Venda listarUm(Long)
+}
+interface Model.DAO.PedidoDAO {
+~ void salvar(Pedido)
+~ void atualizar(Pedido)
+~ void excluir(Pedido)
+~ List<Pedido> listarTodos()
+~ Pedido listarUm(Long)
+~ Pedido listarFuncionario(String)
+}
+class Model.DAO.VendaDAOImpl {
+~ EntityManager manager
++ void salvar(Venda)
++ void atualizar(Venda)
++ void excluir(Venda)
++ List<Venda> listarTodos()
++ Venda listarUm(Long)
+}
+
+
+Model.DAO.ClienteDAO <|.. Model.DAO.ClienteDAOImpl
+javafx.application.Application <|-- View.CadastrarLivro
+Model.DAO.FuncionarioDAO <|.. Model.DAO.FuncionarioDAOImpl
+javafx.application.Application <|-- View.Login
+Model.DAO.PedidoDAO <|.. Model.DAO.PedidoDAOImpl
+javafx.fxml.Initializable <|.. Controller.HomeController
+javafx.application.Application <|-- View.CadastrarFuncionario
+javafx.application.Application <|-- View.PaginaGerente
+javafx.application.Application <|-- View.SignUp
+Model.DAO.LivroDAO <|.. Model.DAO.LivroDAOImpl
+javafx.application.Application <|-- View.RemoverFuncionario
+javafx.application.Application <|-- View.Home
+javafx.application.Application <|-- View.HomeFuncionario
+Model.DAO.VendaDAO <|.. Model.DAO.VendaDAOImpl
+@enduml

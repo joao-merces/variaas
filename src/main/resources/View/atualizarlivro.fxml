@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="348.0" prefWidth="600.0" styleClass="background" stylesheets="@Styles/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AtualizarLivroController">
+   <children>
+      <Button fx:id="botaoVoltar" layoutX="186.0" layoutY="274.0" mnemonicParsing="false" onAction="#botaoVoltarClicked" prefHeight="35.0" prefWidth="92.0" stylesheets="@Styles/styles.css" text="Voltar" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn-color" />
+            <String fx:value="btn-moved" />
+         </styleClass>
+      </Button>
+      <Button fx:id="botaoAtualizar" layoutX="322.0" layoutY="274.0" mnemonicParsing="false" onAction="#botaoAtualizarClicked" prefHeight="35.0" prefWidth="92.0" stylesheets="@Styles/styles.css" text="Atualizar" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn-color" />
+            <String fx:value="btn-moved" />
+         </styleClass>
+      </Button>
+      <Label layoutX="232.0" layoutY="28.0" text="Variaas" textFill="#ff5056">
+         <font>
+            <Font name="Serif Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="326.0" layoutY="69.0" prefHeight="25.0" prefWidth="49.0" text="Preço">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textPreco" layoutX="326.0" layoutY="101.0" prefHeight="35.0" prefWidth="233.0" promptText="Preço" />
+      <Label layoutX="183.0" layoutY="150.0" prefHeight="25.0" prefWidth="181.0" text="Quantidade">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textQuantidade" layoutX="185.0" layoutY="182.0" prefHeight="35.0" prefWidth="233.0" promptText="Quantidade" />
+      <TextField fx:id="textId" layoutX="40.0" layoutY="94.0" prefHeight="35.0" prefWidth="233.0" promptText="Id" />
+      <Label layoutX="40.0" layoutY="56.0" prefHeight="25.0" prefWidth="49.0" text="Id">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

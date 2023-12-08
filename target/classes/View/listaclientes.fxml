@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ListaClienteController">
+   <children>
+      <TableView fx:id="tableView" prefHeight="400.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="tableViewCodigo" prefWidth="71.0" text="clienteId" />
+          <TableColumn fx:id="tableViewCPF" prefWidth="72.0" text="clienteCPF" />
+            <TableColumn fx:id="tableViewNome" prefWidth="149.0" text="clienteNome" />
+            <TableColumn fx:id="tableViewDataNascimento" prefWidth="112.0" text="clienteDataNascimento" />
+            <TableColumn fx:id="tableViewEmail" prefWidth="195.0" text="clienteEmail" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

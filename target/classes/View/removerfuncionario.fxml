@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" styleClass="background" stylesheets="@Styles/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RemoverFuncionarioController">
+   <children>
+      <Label layoutX="125.0" layoutY="137.0" text="Código do funcionário">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textCodigo" layoutX="125.0" layoutY="172.0" prefHeight="35.0" prefWidth="238.0" promptText="Código" />
+      <Button fx:id="botaoVoltar" layoutX="152.0" layoutY="249.0" mnemonicParsing="false" onAction="#botaoVoltarClicked" prefHeight="35.0" prefWidth="92.0" stylesheets="@Styles/styles.css" text="Voltar" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn-color" />
+            <String fx:value="btn-moved" />
+         </styleClass>
+      </Button>
+      <Button fx:id="botaoRemover" layoutX="250.0" layoutY="249.0" mnemonicParsing="false" onAction="#botaoRemoverClicked" prefHeight="35.0" prefWidth="92.0" stylesheets="@Styles/styles.css" text="Remover" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn-color" />
+            <String fx:value="btn-moved" />
+         </styleClass>
+      </Button>
+      <Label layoutX="185.0" layoutY="59.0" text="Variaas" textFill="#ff5056">
+         <font>
+            <Font name="Serif Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="textFunc" layoutX="31.0" layoutY="215.0" text="O funcionário de código: x foi removido com sucesso." visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

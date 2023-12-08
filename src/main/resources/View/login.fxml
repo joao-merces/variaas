@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" styleClass="background" stylesheets="@Styles/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+   <children>
+      <Label layoutX="80.0" layoutY="137.0" text="Usuario">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textUsuario" layoutX="80.0" layoutY="172.0" prefHeight="35.0" prefWidth="233.0" promptText="Usuario" />
+      <Label layoutX="80.0" layoutY="225.0" text="Senha">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="textSenha" layoutX="80.0" layoutY="260.0" prefHeight="35.0" prefWidth="233.0" promptText="Senha" />
+      <Button fx:id="botaoCadastrar" layoutX="99.0" layoutY="318.0" mnemonicParsing="false" onAction="#botaoCadastrarClicked" prefHeight="35.0" prefWidth="92.0" stylesheets="@Styles/styles.css" text="Cadastrar" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn-color" />
+            <String fx:value="btn-moved" />
+         </styleClass>
+      </Button>
+      <Button fx:id="botaoEntrar" layoutX="200.0" layoutY="318.0" mnemonicParsing="false" onAction="#botaoEntrarClicked" prefHeight="35.0" prefWidth="92.0" stylesheets="@Styles/styles.css" text="Entrar" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn-color" />
+            <String fx:value="btn-moved" />
+         </styleClass>
+      </Button>
+      <Label layoutX="137.0" layoutY="55.0" text="Variaas" textFill="#ff5056">
+         <font>
+            <Font name="Serif Bold" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
