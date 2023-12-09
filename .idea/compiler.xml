@@ -9,8 +9,5 @@
         <module name="Variaas" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="vaarias" target="1.7" />
-    </bytecodeTargetLevel>
   </component>
 </project>

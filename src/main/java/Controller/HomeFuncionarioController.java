@@ -78,75 +78,51 @@ public class HomeFuncionarioController implements Initializable {
     private List<Livro> livros() {
         List<Livro> ls = new ArrayList<>();
         Livro livro = new Livro();
-        livro.setLivroTitulo("O Poder do Hábito");
+        livro.setLivroTitulo("O poder do hábito");
         livro.setImageSource("/Capas/o_poder_do_habito.jpg");
         livro.setLivroAutor("Charles Duhigg");
         ls.add(livro);
 
         livro = new Livro();
-        livro.setLivroTitulo("Diário de um Banana");
-        livro.setImageSource("/Capas/diario_de_um_banana.jpg");
-        livro.setLivroAutor("Jeff Kinney");
-        ls.add(livro);
-
-        livro = new Livro();
-        livro.setLivroTitulo("Os Sertões");
-        livro.setImageSource("/Capas/os_sertoes.jpg");
-        livro.setLivroAutor("Euclides da Cunha");
-        ls.add(livro);
-
-        livro = new Livro();
-        livro.setLivroTitulo("Memórias Póstumas de Brás Cubas");
-        livro.setImageSource("/Capas/memorias_postumas_de_bras_cubas.jpg");
-        livro.setLivroAutor("Machado de Assis");
-        ls.add(livro);
-
-        livro = new Livro();
-        livro.setLivroTitulo("O Poder do Hábito");
+        livro.setLivroTitulo("O poder do hábito");
         livro.setImageSource("/Capas/o_poder_do_habito.jpg");
         livro.setLivroAutor("Charles Duhigg");
         ls.add(livro);
 
         livro = new Livro();
-        livro.setLivroTitulo("Diário de um Banana");
-        livro.setImageSource("/Capas/diario_de_um_banana.jpg");
-        livro.setLivroAutor("Jeff Kinney");
-        ls.add(livro);
-
-        livro = new Livro();
-        livro.setLivroTitulo("Os Sertões");
-        livro.setImageSource("/Capas/os_sertoes.jpg");
-        livro.setLivroAutor("Euclides da Cunha");
-        ls.add(livro);
-
-        livro = new Livro();
-        livro.setLivroTitulo("Memórias Póstumas de Brás Cubas");
-        livro.setImageSource("/Capas/memorias_postumas_de_bras_cubas.jpg");
-        livro.setLivroAutor("Machado de Assis");
-        ls.add(livro);
-
-        livro = new Livro();
-        livro.setLivroTitulo("O Poder do Hábito");
+        livro.setLivroTitulo("O poder do hábito");
         livro.setImageSource("/Capas/o_poder_do_habito.jpg");
         livro.setLivroAutor("Charles Duhigg");
         ls.add(livro);
 
         livro = new Livro();
-        livro.setLivroTitulo("Diário de um Banana");
-        livro.setImageSource("/Capas/diario_de_um_banana.jpg");
-        livro.setLivroAutor("Jeff Kinney");
+        livro.setLivroTitulo("O poder do hábito");
+        livro.setImageSource("/Capas/o_poder_do_habito.jpg");
+        livro.setLivroAutor("Charles Duhigg");
         ls.add(livro);
 
         livro = new Livro();
-        livro.setLivroTitulo("Os Sertões");
-        livro.setImageSource("/Capas/os_sertoes.jpg");
-        livro.setLivroAutor("Euclides da Cunha");
+        livro.setLivroTitulo("O poder do hábito");
+        livro.setImageSource("/Capas/o_poder_do_habito.jpg");
+        livro.setLivroAutor("Charles Duhigg");
         ls.add(livro);
 
         livro = new Livro();
-        livro.setLivroTitulo("Memórias Póstumas de Brás Cubas");
-        livro.setImageSource("/Capas/memorias_postumas_de_bras_cubas.jpg");
-        livro.setLivroAutor("Machado de Assis");
+        livro.setLivroTitulo("O poder do hábito");
+        livro.setImageSource("/Capas/o_poder_do_habito.jpg");
+        livro.setLivroAutor("Charles Duhigg");
+        ls.add(livro);
+
+        livro = new Livro();
+        livro.setLivroTitulo("O poder do hábito");
+        livro.setImageSource("/Capas/o_poder_do_habito.jpg");
+        livro.setLivroAutor("Charles Duhigg");
+        ls.add(livro);
+
+        livro = new Livro();
+        livro.setLivroTitulo("O poder do hábito");
+        livro.setImageSource("/Capas/o_poder_do_habito.jpg");
+        livro.setLivroAutor("Charles Duhigg");
         ls.add(livro);
 
         return ls;

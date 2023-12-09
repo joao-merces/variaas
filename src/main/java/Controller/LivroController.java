@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.VO.Livro;
+import View.ConfirmarCompra;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -8,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 public class LivroController {
     @FXML
@@ -47,8 +49,10 @@ public class LivroController {
                                   };
 
     @FXML
-    void btnComprarClicked(ActionEvent event) {
-
+    void btnComprarClicked(ActionEvent event) throws Exception {
+       ConfirmarCompra confirmarcompra = new ConfirmarCompra();
+       Stage stage = new Stage();
+       confirmarcompra.start(stage);
     }
     
     public void setDados(Livro livro) {

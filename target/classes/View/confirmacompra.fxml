@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="348.0" prefWidth="600.0" styleClass="background" stylesheets="@Styles/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ConfirmaCompraController">
+   <children>
+      <Button fx:id="botaoVoltar" layoutX="186.0" layoutY="274.0" mnemonicParsing="false" onAction="#botaoVoltarClicked" prefHeight="35.0" prefWidth="92.0" stylesheets="@Styles/styles.css" text="Voltar" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn-color" />
+            <String fx:value="btn-moved" />
+         </styleClass>
+      </Button>
+      <Button fx:id="botaoComprar" layoutX="322.0" layoutY="274.0" mnemonicParsing="false" onAction="#botaoComprarClicked" prefHeight="35.0" prefWidth="92.0" stylesheets="@Styles/styles.css" text="Comprar" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn-color" />
+            <String fx:value="btn-moved" />
+         </styleClass>
+      </Button>
+      <Label layoutX="33.0" layoutY="26.0" text="Variaas - Confirmação de Compra" textFill="#ff5056">
+         <font>
+            <Font name="Serif Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="171.0" layoutY="114.0" text="Escolha o metodo de pagamento">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="119.0" layoutY="198.0" mnemonicParsing="false" text="Boleto Bancário" />
+      <RadioButton layoutX="284.0" layoutY="198.0" mnemonicParsing="false" text="PIX" />
+      <RadioButton layoutX="414.0" layoutY="198.0" mnemonicParsing="false" text="Cartão" />
+   </children>
+</Pane>
